@@ -9,6 +9,7 @@ Copyright (C) 2024 YYP, Shanghai Jiao Tong University, under MIT License.
 #include<vector>
 #include<iostream>
 #include<sstream>
+#include<fstream>
 
 namespace Ini{
 	inline void splitString(string &str, vector<string> &substrings, char token){
@@ -37,14 +38,11 @@ public:
 	iniClass::impClass::impClass(){
 		#ifdef _WIN32
 		f.open("../../000.ini");
-		if(f.is_open()){fout.open("../../zzz.txt", ios::trunc);}
 		#else
 		f.open("../000.ini");
-		if(f.is_open()){fout.open("../zzz.txt", ios::trunc);}
 		#endif
 		if(!f.is_open()){
 			f.open("000.ini");
-			fout.open("zzz.txt", ios::trunc);
 		}
 		init();
 	}
