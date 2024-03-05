@@ -1,6 +1,6 @@
 # ini-reader
 
-A good choice to replace yaml, xml or json for robotics.
+A good choice to replace yaml, xml or json for robotics with c++.
 
 Lite and easy to use.
 
