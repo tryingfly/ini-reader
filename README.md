@@ -1,2 +1,3 @@
 # ini-reader
-an good way to replace yaml, xml
+an good choice to replace yaml, xml or json for robotics.
+
