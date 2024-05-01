@@ -18,13 +18,13 @@ namespace Ini{
 class iniClass{
 public:
 	iniClass();//不要在实时循环使用
-	iniClass(string fileName);//不要在实时循环使用
-	double operator[](string key);//不要在实时循环使用
-	string getStr(string key);//不要在实时循环使用
+	iniClass(const string &fileName);//不要在实时循环使用
+	double operator[](const string &key);//不要在实时循环使用
+	const string &getStr(const string &key);//不要在实时循环使用
 	template<typename T,int n>
-	void getArray(string key,T (&value)[n]){getArray(key,value,n);};//不要在实时循环使用
+	void getArray(const string &key,T (&value)[n]){getArray(key,value,n);};//不要在实时循环使用
 	template<typename T>
-	void getArray(string key,T *value,int n);//不要在实时循环使用
+	void getArray(const string &key,T *value,int n);//不要在实时循环使用
 private:
 	class impClass;
 	impClass&imp;
